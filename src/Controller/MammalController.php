@@ -58,6 +58,8 @@ class MammalController extends AbstractController
       ]
     ];
 
+    dump($persons);
+
     return $this->render('animal/list.twig', compact('animal', 'persons'));
   }
 }

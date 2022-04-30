@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+<!-- Sobrescrever o title "welcome" no base.html.twig -->
+{% block title %} Animal !!! {% endblock %}
+
+{% block body %}
+<h1>Mammal Animal</h1>
+
+{# Comentário nesta linha é ignorado no HTML, somente no PHP #}
+<!-- Observação: comentário no HTML -->
+
+{% if animal == "cat" %}
+<p>Cat is a cool animal </p>
+{% else %}
+<p>Name: {{animal}}</p>
+<p>Length: {{animal|length}}</p>
+{% endif %}
+
+[1, 2, 3, 4] o último valor: <strong>{{ [1, 2, 3, 4]|last }}</strong>
+
+<ul>
+  {% for person in persons %}
+  <li>{{ person.name }} | {{person.cpf}} | {{person['genro']}}</li>
+  {% endfor %}
+</ul>
+{% endblock %}

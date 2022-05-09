@@ -55,13 +55,11 @@
 		{% block body %}{% endblock %}
 	</main>
 
-
-	<!-- Bootstrap JS -->
-
-	<!-- End Bootstrap JS -->
+	<script src="{{ asset('/assets/jquery-3.6.0.min.js') }}"></script>
+	<script src="{{ asset('/assets/bootstrap.bundle.js') }}"></script>
 	{% block javascripts %}
-	{{ encore_entry_script_tags('app') }}
 	{% endblock %}
+	{{ encore_entry_script_tags('app') }}
 
 </body>
 

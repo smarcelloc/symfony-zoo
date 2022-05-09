@@ -9,13 +9,13 @@ use Symfony\Component\Routing\Annotation\Route;
 class MammalController extends AbstractController
 {
   /**
-   * @Route("/")
+   * @Route("/", name="home")
    * 
    * @return Response
    */
   public function index()
   {
-    return new Response('Zoo !!!', Response::HTTP_OK);
+    return $this->render('home.twig');
   }
 
   /**
@@ -27,7 +27,7 @@ class MammalController extends AbstractController
   public function show(string $animal)
   {
     $animal = mb_ereg_replace('-', ' ', $animal);
-    $content = sprintf('Mammal detail page "%s"', $animal);
+    $content = sprintf('Mammal detail page "%s" <br/>', $animal);
 
     return new Response($content, Response::HTTP_OK);
   }

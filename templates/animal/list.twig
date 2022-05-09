@@ -22,4 +22,6 @@
   <li>{{ person.name }} | {{person.cpf}} | {{person['genro']}}</li>
   {% endfor %}
 </ul>
+
+<a href="{{path('home', {_fragment: 'title' })}}">Home #Title</a>
 {% endblock %}
